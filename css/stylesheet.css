@@ -1,0 +1,15 @@
+
+@font-face {
+    font-family: "sitemainfont";
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+body{
+    font-family: sitemainfont !important;
+}
+
+.profile img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
