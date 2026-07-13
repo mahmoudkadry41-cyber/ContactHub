@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,35 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
+
 <body>
+    <!-- --------------------------------------NAVBAR---------------------------------------------- -->
     <div class="mainnaav container-fluid ">
         <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainnav">
             <div class="container">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center ">
                     <div
-                        class="mainicon rounded-circle me-3 overflow-hidden d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-utensils fa-xl" style="color: rgb(255, 255, 255);"></i>
+                        class="mainicon rounded-4 me-3 overflow-hidden d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-address-book fa-xl" style="color: rgb(255, 255, 255);"></i>
                     </div>
                     <div>
-                        <h1 class="p-0 m-0">What's For Dinner</h1>
-                        <p class="subspan p-0 m-0">Your daily meal inspiration</p>
+                        <h1 class="p-0 m-0">Contact<span>Hub</span></h1>
+                        <p class="subspan p-0 m-0">Smart Contact Manager</p>
                     </div>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse pb-3 " id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto align-items-center gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="fa-solid fa-bookmark fa-lg"></i></a>
+                            <button class="btn rounded-3" id="addContact" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"> + Add Contact</button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-clock-rotate-left fa-lg"></i></a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-bell fa-lg"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-gear fa-lg"></i></a>
@@ -46,8 +49,90 @@
             </div>
         </nav>
     </div>
+    <!-- --------------------------------------NAVBAR---------------------------------------------- -->
+
+    <div class=" rounded-4 modal fade modal-dialog modal-dialog-centered modal-dialog-scrollable" id="staticBackdrop"
+        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog rounded-4">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Add New Contact</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="rounded-4 d-flex align-items-center justify-content-center flex-column">
+                        <div class="d-flex flex-column gap-2 flex align-items-center justify-content-center mb-5">
+                            <div class="personalphoto rounded-circle d-flex align-items-center justify-content-center ">
+                                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+                            </div>
+                            <button type="button" class="btn btn-light border">
+                                <i class="fa-solid fa-camera" style="color: #6a7282;"></i>
+                                <span>Change Photo</span>
+                            </button>
+                        </div>
+                        <div class="mb-3 w-100">
+                            <label for="exampleFormControlInput1" class="form-label">Full Name <span>*</span></label>
+                            <input type="text" class="form-control mb-3" id="exampleFormControlInput1"
+                                placeholder="Enter Full Name">
+                            <label for="exampleFormControlInput1" class="form-label">Phone Number <span>*</span></label>
+                            <input type="number" class="form-control  mb-3" id="exampleFormControlInput1"
+                                placeholder="Enter Phone Number">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control  mb-3" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                            <label for="exampleFormControlInput1" class="form-label">Address</label>
+                            <input type="Address" class="form-control  mb-2" id="exampleFormControlInput1"
+                                placeholder="Enter Your Address">
+                            <label for="exampleDataList" class="form-label">Group</label>
+                            <input class="form-control  mb-3" list="datalistOptions" id="exampleDataList"
+                                placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="Family">
+                                <option value="Friends">
+                                <option value="Work">
+                                <option value="School">
+                                <option value="Other">
+                            </datalist>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
+                                <textarea class="form-control  mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Notes About This Contact"></textarea>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
+                                <label class="form-check-label" for="checkDefault1">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check  form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="" id="checkDefault2">
+                                <label class="form-check-label" for="checkDefault2">
+                                    Default checkbox
+                                </label>
+                            </div>
+                        </div>
+                                        <div class="modal-footer d-flex flex-row w-100 mt-2">
+                                            <button type="button" class="btn1 btn btn-secondary flex-fill" data-bs-dismiss="modal">Cancle</button>
+                                            <button type="button" class="btn2 btn btn-primary flex-fill">
+                                            <i class="fa-solid fa-check" style="color: rgb(255, 255, 255);"></i>
+                                                Save Contact
+                                            </button>
+                                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------------------------------------NAVBAR---------------------------------------------- -->
 
     <script src="./JS/bootstrap.min.js"></script>
     <script src="./JS/all.min.js"></script>
 </body>
+
 </html>

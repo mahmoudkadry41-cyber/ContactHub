@@ -13,3 +13,75 @@ body{
     width: 50px;
     object-fit: cover;
 }
+.mainicon{
+    height: 50px;
+    width: 50px;
+    background-image: linear-gradient(to right,#752BFD,#5A36F8) ;
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+h1 span{
+    color: oklch(0.541 0.281 293.009);
+}
+.mainnaav .subspan{
+    font-size: .75rem !important;
+    font-weight: 500 !important;
+    line-height: 1rem !important;
+    color: oklch(0.551 0.027 264.364);
+}
+
+#addContact{
+    background-image: linear-gradient(to right,#7C25FD 70%,#5238F6) ;
+    color:white;
+    font-size: .875rem !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    transition: .4s all;
+}
+
+#addContact:hover{
+    transform: translateY(-0.125rem);
+    box-shadow: rgba(0, 0, 0, 0.144) 0 10px 10px ;
+}
+.personalphoto{
+    height: 6.25rem;
+    width: 6.25rem;
+    background-color: #2C7CFF;
+}
+
+.modal{
+    max-height: 630px !important;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.form-control{
+    border-radius: 6px;
+}
+
+.form-label span{
+    color: red;
+}
+textarea{
+    resize: none;
+    overflow: auto;
+}
+.btn2{
+    background-color: transparent;
+background-image: linear-gradient(to right , #7A27FD,#5238F7);
+}
+.btn2:hover{
+
+     box-shadow: rgba(0, 0, 0, 0.144) 0 10px 10px ;
+}
+.btn1{
+    background-color: #F3F4F6;
+    color: oklch(0.373 0.034 259.733);
+}
+.modal-backdrop {
+  background-color: rgb(0, 0, 0) !important; 
+  backdrop-filter: blur(31px);          
+}
