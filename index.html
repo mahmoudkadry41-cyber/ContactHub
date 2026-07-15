@@ -12,8 +12,8 @@
 
 <body>
     <!-- --------------------------------------NAVBAR---------------------------------------------- -->
-    <div class="mainnaav container-fluid ">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="mainnav">
+    <div class="mainnaav container-fluid mb-0 pb-0 bg-white position-fixed z-3">
+        <nav class="navbar navbar-expand-lg" id="mainnav">
             <div class="container">
                 <div class="d-flex align-items-center ">
                     <div
@@ -49,12 +49,11 @@
             </div>
         </nav>
     </div>
-    <!-- --------------------------------------NAVBAR---------------------------------------------- -->
+    <!-- --------------------------------------MODAL---------------------------------------------- -->
 
-    <div class=" rounded-4 modal fade modal-dialog modal-dialog-centered modal-dialog-scrollable" id="staticBackdrop"
-        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-        aria-hidden="true">
-        <div class="modal-dialog rounded-4">
+    <div class=" rounded-4 modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable rounded-4">
             <div class="modal-content rounded-4">
                 <div class="modal-header">
                     <h2 class="modal-title fs-5" id="staticBackdropLabel">Add New Contact</h2>
@@ -74,15 +73,15 @@
                         <div class="mb-3 w-100">
                             <label for="exampleFormControlInput1" class="form-label">Full Name <span>*</span></label>
                             <input type="text" class="form-control mb-3" id="exampleFormControlInput1"
-                                placeholder="Enter Full Name">
-                            <label for="exampleFormControlInput1" class="form-label">Phone Number <span>*</span></label>
-                            <input type="number" class="form-control  mb-3" id="exampleFormControlInput1"
-                                placeholder="Enter Phone Number">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control  mb-3" id="exampleFormControlInput1"
+                                placeholder="Enter Full Name" required>
+                            <label for="exampleFormControlInput2" class="form-label">Phone Number <span>*</span></label>
+                            <input type="number" class="form-control  mb-3" id="exampleFormControlInput2"
+                                placeholder="Enter Phone Number" required>
+                            <label for="exampleFormControlInput3" class="form-label">Email address</label>
+                            <input type="email" class="form-control  mb-3" id="exampleFormControlInput3"
                                 placeholder="name@example.com">
-                            <label for="exampleFormControlInput1" class="form-label">Address</label>
-                            <input type="Address" class="form-control  mb-2" id="exampleFormControlInput1"
+                            <label for="exampleFormControlInput4" class="form-label">Address</label>
+                            <input type="text" class="form-control  mb-2" id="exampleFormControlInput4"
                                 placeholder="Enter Your Address">
                             <label for="exampleDataList" class="form-label">Group</label>
                             <input class="form-control  mb-3" list="datalistOptions" id="exampleDataList"
@@ -96,10 +95,11 @@
                             </datalist>
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
-                                <textarea class="form-control  mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Notes About This Contact"></textarea>
+                                <textarea class="form-control  mb-3" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="Enter Notes About This Contact"></textarea>
                             </div>
                         </div>
-                        <div >
+                        <div>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
                                 <label class="form-check-label" for="checkDefault1">
@@ -113,13 +113,14 @@
                                 </label>
                             </div>
                         </div>
-                                        <div class="modal-footer d-flex flex-row w-100 mt-2">
-                                            <button type="button" class="btn1 btn btn-secondary flex-fill" data-bs-dismiss="modal">Cancle</button>
-                                            <button type="button" class="btn2 btn btn-primary flex-fill">
-                                            <i class="fa-solid fa-check" style="color: rgb(255, 255, 255);"></i>
-                                                Save Contact
-                                            </button>
-                                        </div>
+                        <div class="modal-footer d-flex flex-row w-100 mt-2">
+                            <button type="button" class="btn1 btn btn-secondary flex-fill"
+                                data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn2 btn btn-primary flex-fill">
+                                <i class="fa-solid fa-check" style="color: rgb(255, 255, 255);"></i>
+                                Save Contact
+                            </button>
+                        </div>
                     </form>
 
                 </div>
@@ -129,10 +130,249 @@
     </div>
 
 
-    <!-- --------------------------------------NAVBAR---------------------------------------------- -->
+    <!-- --------------------------------------MODAL---------------------------------------------- -->
+    <!-- --------------------------------------Body---------------------------------------------- -->
 
-    <script src="./JS/bootstrap.min.js"></script>
-    <script src="./JS/all.min.js"></script>
+    <div class="container-fluid mainbody">
+        <div class="container pt-3">
+            <!-- --------------------------------------SUMMARY---------------------------------------------- -->
+
+            <div class="summary row g-3 m-0 pt-5">
+                <div class="col-12 col-md-4">
+                    <div class="summ sall rounded-3 d-flex justify-content-start align-items-center">
+
+                        <div class="rightsidesumm d-flex justify-content-center align-items-center ">
+                            <div class="summicon rounded-2 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                            </div>
+                        </div>
+                        <div class="leftsidesumm">
+                            <h6>Total</h6>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="summ sfavo rounded-3 d-flex justify-content-start align-items-center">
+
+                        <div class="rightsidesumm d-flex justify-content-center align-items-center ">
+                            <div class="summicon rounded-2 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                            </div>
+                        </div>
+                        <div class="leftsidesumm">
+                            <h6>Favorites</h6>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="summ semmerg rounded-3 d-flex justify-content-start align-items-center">
+                        <div class="rightsidesumm d-flex justify-content-center align-items-center ">
+                            <div class="summicon rounded-2 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                            </div>
+                        </div>
+                        <div class="leftsidesumm">
+                            <h6>Emergency</h6>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- --------------------------------------SUMMARY---------------------------------------------- -->
+            <div class="container-fluid fac d-flex vh-100 gap-4 pt-3 flex-column flex-lg-row">
+                <div class="allcontacts p-4">
+                    <h2>All Contacts</h2>
+                    <p>Manage and organize your 1 contacts</p>
+                    <input type="search" class="form-control" placeholder="Search contacts...">
+                    <div class="row pt-3">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
+                                    <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-2">
+                                        <div
+                                            class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
+                                            <div
+                                                class="contacticon rounded-2 d-flex justify-content-center align-items-center">
+                                                <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="leftsidecard d-flex justify-content-center align-items-center flex-column gap-2">
+                                            <h5>dasd</h5>
+                                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                                <div
+                                                    class="smalicon phoneicon d-flex justify-content-center align-items-center rounded-2">
+                                                    <i class="fa-solid fa-phone fa-2xs" style="color: #155dfc;"></i>
+
+                                                </div>
+                                                <span>0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="email p-2">
+                                        <div class="d-flex justify-content-start align-items-center gap-2">
+                                            <div
+                                                class="smalicon phoneicon d-flex justify-content-center align-items-center rounded-2">
+                                                <i class="fa-solid fa-envelope fa-2xs" style="color: #7F22FE;"></i>
+                                            </div>
+                                            <span>mkadry321@hotmail.com</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="address p-2">
+
+                                        <div class="d-flex justify-content-start align-items-center gap-2 mt-2 mb-2">
+                                            <div
+                                                class="smalicon phoneicon d-flex justify-content-center align-items-center rounded-2">
+                                                <i class="fa-solid fa-location-dot fa-2xs" style="color: #009966;"></i>
+                                            </div>
+                                            <span>Taksee mourice Dose</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="botcard w-100 bg-light d-flex justify-content-between align-items-center">
+                                        <div class="w-50">
+                                            <div
+                                                class="botrtsd  ps-2 d-flex justify-content-start align-items-center gap-2">
+                                                <div
+                                                    class="callicon rounded-2 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-phone" style="color: #009966;"></i>
+                                                </div>
+                                                <div
+                                                    class="emailicon rounded-2 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-envelope" style="color: #7F22FE;"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-50">
+                                            <div
+                                                class="botrtsd  ps-2 d-flex justify-content-end align-items-center gap-2 pe-2">
+                                                <div
+                                                    class="favicon rounded-2 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                </div>
+                                                <div
+                                                    class="hearticon rounded-2 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-regular fa-heart"
+                                                        style="color: rgba(59, 59, 58, 0.274);"></i>
+                                                </div>
+                                                <div
+                                                    class="penicon rounded-2 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-pen" style="color: #6A7282;"></i>
+                                                </div>
+                                                <div
+                                                    class="recycleicon rounded-2 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-trash" style="color: #6A7282;"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="fae h-100 d-flex flex-column gap-4">
+                    <div class="card Favorites">
+                        <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
+                            <div
+                                class="tpcard rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
+                                <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
+                                    <div
+                                        class="favorateicon rounded-2 d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-star" style="color: white;"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="leftsidecard d-flex justify-content-center align-items-start flex-column gap-2">
+                                    <h5>Favorites</h5>
+                                    <div class="d-flex justify-content-start align-items-center gap-2">
+                                        <span>Quick access to starred contacts</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botcard1 w-100 bg-light d-flex justify-content-between align-items-center ">
+                                <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
+                                    <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
+                                        <div
+                                            class="favorateicon rounded-2 d-flex justify-content-center align-items-center">
+                                            <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                                        </div>
+                                    </div>
+                                    <div class="leftsidecard d-flex justify-content-between align-items-center flex gap-2 w-100">
+                                        <div>
+                                            <h5>sasasa</h5>
+                                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                                <span>01122531122</span>
+                                            </div>
+                                        </div>
+                                        <div class="callicon rounded-2 d-flex justify-content-center align-items-center">
+                                            <i class="fa-solid fa-phone" style="color: #009966;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card Favorites">
+                        <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
+                            <div
+                                class="tpcard1 rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
+                                <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
+                                    <div
+                                        class="Emergencyicon rounded-2 d-flex justify-content-center align-items-center">
+                                        <i class="fa-solid fa-heart-pulse" style="color: white;"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="leftsidecard d-flex justify-content-center align-items-start flex-column gap-2">
+                                    <h5>Emergency</h5>
+                                    <div class="d-flex justify-content-start align-items-center gap-2">
+                                        <span>Quick access to starred contacts</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botcard1 w-100 bg-light d-flex justify-content-between align-items-center ">
+                                <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
+                                    <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
+                                        <div
+                                            class="favorateicon rounded-2 d-flex justify-content-center align-items-center">
+                                            <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="leftsidecard d-flex justify-content-between align-items-center flex gap-2 w-100">
+                                        <div>
+                                            <h5>sasasa</h5>
+                                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                                <span>01122531122</span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="callicon rounded-2 d-flex justify-content-center align-items-center">
+                                            <i class="fa-solid fa-phone" style="color: #009966;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <script src="./JS/bootstrap.min.js"></script>
+        <script src="./JS/all.min.js"></script>
 </body>
 
 </html>

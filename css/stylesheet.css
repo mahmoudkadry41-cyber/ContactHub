@@ -6,6 +6,8 @@
 
 body{
     font-family: sitemainfont !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .profile img{
@@ -52,10 +54,10 @@ h1 span{
     background-color: #2C7CFF;
 }
 
-.modal{
+.modal-dialog{
     max-height: 630px !important;
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-width: none !important;
 }
 
 .form-control{
@@ -85,3 +87,195 @@ background-image: linear-gradient(to right , #7A27FD,#5238F7);
   background-color: rgb(0, 0, 0) !important; 
   backdrop-filter: blur(31px);          
 }
+
+.summ{
+    height: 80px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    transition: all .4s;
+        box-shadow: rgba(128, 128, 128, 0.185) 2px 2px 2px;
+}
+.summ:hover{
+    box-shadow: rgba(128, 128, 128, 0.185) 0 10px 10px;
+}
+.rightsidesumm{
+    height: 100%;
+    width: 100px;
+}
+.summicon{
+    width: 3.125rem;
+    height: 3.125rem;
+}
+.contacticon{
+    width: 3.125rem;
+    height: 3.125rem;
+    background-image: linear-gradient(to right , #FD8D00,#F75600);
+}
+.favorateicon{
+    width: 3.125rem;
+    height: 3.125rem;
+    background-image: linear-gradient(to right , #FD8D00,#F75600);
+}
+.Emergencyicon{
+    width: 3.125rem;
+    height: 3.125rem;
+    background-image: linear-gradient(to right , red);
+}
+
+.sall .summicon{
+    background-color: #1C69FF;
+}
+.sfavo .summicon{
+    background-color: #FFA400;
+}
+.semmerg .summicon{
+    background-color: #FA1649;
+}
+h6{
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: oklch(0.551 0.027 264.364);
+    margin: 0;
+    padding: 0;
+}
+.leftsidesumm{
+    font-size: 1.5rem;
+    line-height: 32px;
+    font-weight: 700;
+    color: oklch(0.21 0.034 264.665);
+}
+
+.mainbody{
+    background-color: #F5F8FC;
+}
+.fae{
+    min-width: 300px;
+}
+.allcontacts{
+    width: 100%;
+}
+
+.allcontacts h2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.allcontacts p{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: oklch(0.551 0.027 264.364);
+}
+
+.card{
+box-shadow: rgba(128, 128, 128, 0.185) 2px 2px 2px;
+}
+
+.card-body span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: oklch(0.551 0.027 264.364);
+}
+
+.smalicon{
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+}
+
+.phoneicon{
+ background-color: #DBEAFE;
+}
+h5{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+.botcard{
+    height: 50px;
+    border-top: rgba(128, 128, 128, 0.404) 1px solid !important;
+    background-color:#FAFBFC;
+}
+.botcard1{
+
+    border-top: rgba(128, 128, 128, 0.404) 1px solid !important;
+    background-color:#FAFBFC;
+}
+.callicon{
+    width: 2.125rem;
+    height: 2.125rem;
+    background-color: #ECFDF5; 
+    cursor: pointer;
+    
+}
+.favicon{
+    width: 2.125rem;
+    height: 2.125rem;
+    background-color: #FFFBEB; 
+    cursor: pointer;
+    
+}
+.emailicon{
+    width: 2.125rem;
+    height: 2.125rem;
+    background-color: #F5F3FF; 
+    cursor: pointer;
+  
+}
+.hearticon{
+    width: 2.125rem;
+    height: 2.125rem;
+    background-color: #F9FAFB; 
+    cursor: pointer;
+}
+.penicon{
+    width: 2.125rem;
+    height: 2.125rem;
+    background-color: #F9FAFB; 
+    cursor: pointer;
+}
+.recycleicon{
+    width: 2.125rem;
+    height: 2.125rem;
+    background-color: #F9FAFB; 
+    cursor: pointer;
+}
+.recycleicon:hover{
+    background-color: #FFF1F2;
+}
+.penicon:hover{
+    background-color: #EEF2FF;
+}
+.penicon:hover .fa-pen{
+    color: #4F39F6 !important;
+}
+.callicon:hover{
+    background-color: #D0FAE5;
+}
+.emailicon:hover{
+    background-color: #EDE9FE;
+}
+.favicon:hover{
+    background-color: #FEF3C6;
+}
+.hearticon:hover{
+    background-color: #F3F4F6;
+}
+.hearticon:hover .fa-heart{
+    color: red !important;
+}
+.recycleicon:hover .fa-trash{
+    color: red !important;
+}
+
+.Favorites .tpcard{
+background-color: #FFF8ED;
+}
+.Favorites .tpcard1{
+background-color: #FFF2F3;
+}
+
