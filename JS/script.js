@@ -124,8 +124,8 @@ function display() {
   var emirgbox = ``;
   var Favoritecount = 0;
   var Emergencycount = 0;
-  document.getElementById("favoritcard").innerHTML = "";
-  document.getElementById("emirgcard").innerHTML = "";
+  document.getElementById("favoritcard").innerHTML = "No favorites yet";
+  document.getElementById("emirgcard").innerHTML = "No emergency contacts";
   for (var i = 0; i < contactList.length; i++) {
             var firstLetter = contactList[i].Name
               ? contactList[i].Name.charAt(0).toUpperCase()
