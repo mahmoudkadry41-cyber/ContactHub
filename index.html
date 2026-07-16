@@ -181,7 +181,7 @@
                 </div>
             </div>
             <!-- --------------------------------------SUMMARY---------------------------------------------- -->
-            <div class="container-fluid fac d-flex vh-100 gap-4 pt-3 flex-column flex-lg-row">
+            <div class="container-fluid fac d-flex min-vh-100 gap-4 pt-3 flex-column flex-lg-row">
                 <div class="allcontacts p-4">
                     <h2>All Contacts</h2>
                     <p>Manage and organize your 1 contacts</p>
@@ -192,11 +192,18 @@
                                 <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
                                     <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-2">
                                         <div
-                                            class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
+                                            class="rightsidecard d-flex justify-content-start align-items-center mb-2">
                                             <div
-                                                class="contacticon rounded-2 d-flex justify-content-center align-items-center">
+                                                class="contacticon rounded-2 d-flex justify-content-center align-items-center position-relative">
                                                 <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
+                                                <div class="favtag d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-star fa-xs" style="color: rgb(255, 255, 255);"></i>
+                                                </div>
+                                                <div class="emrgtag d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-heart-pulse fa-2xs" style="color: rgb(255, 255, 255);"></i>
+                                                </div>
                                             </div>
+                                            
                                         </div>
                                         <div
                                             class="leftsidecard d-flex justify-content-center align-items-center flex-column gap-2">
@@ -231,6 +238,7 @@
                                             <span>Taksee mourice Dose</span>
                                         </div>
                                     </div>
+                                    <span class="badge text-bg-danger ms-3 pt-0 pb-0 mb-2 "><i class="fa-solid fa-heart-pulse fa-2xs" style="color: rgb(255, 255, 255);"></i>  Emergency</span>
                                     <div
                                         class="botcard w-100 bg-light d-flex justify-content-between align-items-center">
                                         <div class="w-50">
@@ -275,9 +283,9 @@
 
                     </div>
                 </div>
-                <div class="fae h-100 d-flex flex-column gap-4">
+                <div class="fae h-100 d-flex flex-column gap-4 pt-5">
                     <div class="card Favorites">
-                        <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
+                        <div class="card-body d-flex justify-content-start align-items-start flex-column p-0">
                             <div
                                 class="tpcard rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
                                 <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
@@ -301,7 +309,7 @@
                         </div>
                     </div>
                     <div class="card Favorites">
-                        <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
+                        <div class="card-body d-flex justify-content-start align-items-start flex-column p-0">
                             <div
                                 class="tpcard1 rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
                                 <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
@@ -314,7 +322,7 @@
                                     class="leftsidecard d-flex justify-content-center align-items-start flex-column gap-2">
                                     <h5>Emergency</h5>
                                     <div class="d-flex justify-content-start align-items-center gap-2">
-                                        <span>Quick access to starred contacts</span>
+                                        <span>Important contacts for urgent calls</span>
                                     </div>
                                 </div>
                             </div>
@@ -332,10 +340,12 @@
 
         </div>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script src="./JS/bootstrap.min.js"></script>
         <script src="./JS/all.min.js"></script>
         <script src="./JS/script.js"></script>
+        
 
 </body>
 

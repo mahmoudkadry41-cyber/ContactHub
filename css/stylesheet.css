@@ -109,7 +109,7 @@ background-image: linear-gradient(to right , #7A27FD,#5238F7);
 .contacticon{
     width: 3.125rem;
     height: 3.125rem;
-    background-image: linear-gradient(to right , #FD8D00,#F75600);
+
 }
 .favorateicon{
     width: 3.125rem;
@@ -170,6 +170,7 @@ h6{
 
 .card{
 box-shadow: rgba(128, 128, 128, 0.185) 2px 2px 2px;
+height: 250px;
 }
 
 .card-body span{
@@ -195,6 +196,7 @@ h5{
     margin: 0;
     padding: 0;
 }
+
 .botcard{
     height: 50px;
     border-top: rgba(128, 128, 128, 0.404) 1px solid !important;
@@ -278,7 +280,7 @@ h5{
     scrollbar-width: none;
 }
 .mainbody .Favorites{
-    max-height: 300px !important;
+    height: 300px !important;
     overflow-y: scroll;
     scrollbar-width: none;
 
@@ -291,3 +293,23 @@ background-color: #FFF8ED;
 background-color: #FFF2F3;
 }
 
+.favtag{
+    width: 20px;
+    height: 20px;
+    background-color: #FFB900;
+    border-radius: 50%;
+    border: white 2px solid;
+    position: absolute;
+    top: -10px;
+    right: -7px;
+}
+.emrgtag{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    border: white 2px solid;
+    position: absolute;
+    bottom: -10px;
+    right: -7px;
+}
