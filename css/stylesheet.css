@@ -271,6 +271,18 @@ h5{
 .recycleicon:hover .fa-trash{
     color: red !important;
 }
+#contactlist{
+    
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.mainbody .Favorites{
+    max-height: 300px !important;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+}
 
 .Favorites .tpcard{
 background-color: #FFF8ED;

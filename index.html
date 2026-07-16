@@ -75,7 +75,7 @@
                             <input type="text" class="form-control mb-3" id="exampleFormControlInput1"
                                 placeholder="Enter Full Name" required>
                             <label for="exampleFormControlInput2" class="form-label">Phone Number <span>*</span></label>
-                            <input type="number" class="form-control  mb-3" id="exampleFormControlInput2"
+                            <input type="tel" class="form-control  mb-3" id="exampleFormControlInput2"
                                 placeholder="Enter Phone Number" required>
                             <label for="exampleFormControlInput3" class="form-label">Email address</label>
                             <input type="email" class="form-control  mb-3" id="exampleFormControlInput3"
@@ -103,20 +103,20 @@
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" value="" id="checkDefault1">
                                 <label class="form-check-label" for="checkDefault1">
-                                    Default checkbox
+                                    Favorite
                                 </label>
                             </div>
                             <div class="form-check  form-check-inline">
                                 <input class="form-check-input" type="checkbox" value="" id="checkDefault2">
                                 <label class="form-check-label" for="checkDefault2">
-                                    Default checkbox
+                                    Emergency
                                 </label>
                             </div>
                         </div>
                         <div class="modal-footer d-flex flex-row w-100 mt-2">
                             <button type="button" class="btn1 btn btn-secondary flex-fill"
                                 data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn2 btn btn-primary flex-fill">
+                            <button type="button" class="btn2 btn btn-primary flex-fill" id="addBtn">
                                 <i class="fa-solid fa-check" style="color: rgb(255, 255, 255);"></i>
                                 Save Contact
                             </button>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="leftsidesumm">
                             <h6>Total</h6>
-                            <span>0</span>
+                            <span  id="totalcontacts"></span>
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="leftsidesumm">
                             <h6>Favorites</h6>
-                            <span>0</span>
+                            <span id="favoritscount"></span>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                         </div>
                         <div class="leftsidesumm">
                             <h6>Emergency</h6>
-                            <span>0</span>
+                            <span id="emerncycount"></span>
                         </div>
                     </div>
                 </div>
@@ -185,9 +185,9 @@
                 <div class="allcontacts p-4">
                     <h2>All Contacts</h2>
                     <p>Manage and organize your 1 contacts</p>
-                    <input type="search" class="form-control" placeholder="Search contacts...">
-                    <div class="row pt-3">
-                        <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input id="search" type="search" class="form-control" placeholder="Search contacts...">
+                    <div class="row pt-3 g-3 mt-2" id="contactlist">
+                        <div class="col-sm-6 mb-3 mb-sm-0" >
                             <div class="card">
                                 <div class="card-body d-flex justify-content-between align-items-start flex-column p-0">
                                     <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-2">
@@ -295,26 +295,8 @@
                                 </div>
                             </div>
 
-                            <div class="botcard1 w-100 bg-light d-flex justify-content-between align-items-center ">
-                                <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
-                                    <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
-                                        <div
-                                            class="favorateicon rounded-2 d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
-                                        </div>
-                                    </div>
-                                    <div class="leftsidecard d-flex justify-content-between align-items-center flex gap-2 w-100">
-                                        <div>
-                                            <h5>sasasa</h5>
-                                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                                <span>01122531122</span>
-                                            </div>
-                                        </div>
-                                        <div class="callicon rounded-2 d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-phone" style="color: #009966;"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="botcard1 w-100 bg-light d-flex flex-column justify-content-between align-items-center" id="favoritcard">
+                               
                             </div>
                         </div>
                     </div>
@@ -337,28 +319,8 @@
                                 </div>
                             </div>
 
-                            <div class="botcard1 w-100 bg-light d-flex justify-content-between align-items-center ">
-                                <div class="rounded-3 d-flex justify-content-start align-items-start gap-2 p-3 w-100">
-                                    <div class="rightsidecard d-flex justify-content-start align-items-center mb-2 ">
-                                        <div
-                                            class="favorateicon rounded-2 d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="leftsidecard d-flex justify-content-between align-items-center flex gap-2 w-100">
-                                        <div>
-                                            <h5>sasasa</h5>
-                                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                                <span>01122531122</span>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="callicon rounded-2 d-flex justify-content-center align-items-center">
-                                            <i class="fa-solid fa-phone" style="color: #009966;"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="botcard1 w-100 bg-light d-flex justify-content-between align-items-center flex-column" id="emirgcard">
+
                             </div>
                         </div>
                     </div>
@@ -373,6 +335,8 @@
 
         <script src="./JS/bootstrap.min.js"></script>
         <script src="./JS/all.min.js"></script>
+        <script src="./JS/script.js"></script>
+
 </body>
 
 </html>
